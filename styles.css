@@ -1,0 +1,296 @@
+/* General Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #004a99;
+    font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0066cc;
+}
+
+.nav-links .btn-animated {
+    padding: 12px 25px;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links .btn-animated:hover {
+    transform: translateY(-5px);
+    background-color: #004a99;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 30px;
+    background-color: #eef7ff;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+.hero-image img {
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Teaching Philosophy Section */
+.philosophy {
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px 40px 20px;
+    border-radius: 10px;
+}
+
+.philosophy h2 {
+    font-size: 2rem;
+    color: #004a99;
+    margin-bottom: 20px;
+}
+
+.philosophy-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.philosophy-image img {
+    width: 250px; /* Set a smaller width for the vertical rectangle */
+    height: 400px; /* Set a taller height for the vertical rectangle */
+    object-fit: rectangle; /* Ensure the image covers the area, possibly cropping */
+    object-position: right center; /* Shift the image to show more of the right side */
+    margin-left: 200px; /* Optional: Shift the image to the right */
+}
+
+
+.philosophy-text {
+    flex: 1;
+}
+
+.philosophy-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.philosophy-text ul {
+    margin: 15px 0;
+}
+
+.philosophy-text li {
+    margin-bottom: 10px;
+}
+
+.philosophy .btn-animated {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.philosophy .btn-animated:hover {
+    background-color: #004a99;
+}
+
+/* Events Section */
+.events {
+    text-align: center;
+    padding: 40px 30px;
+    background-color: #f4f4f4;
+}
+
+.events h2 {
+    font-size: 2rem;
+    color: #004a99;
+    margin-bottom: 20px;
+}
+
+.event-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-item:hover {
+    transform: scale(1.05);
+}
+
+.event-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.event-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p,
+.footer-links p {
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #0066cc;
+}
+
+/* Contact Button Image */
+.button-image {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.button-image:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+
+    .philosophy-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .events h2 {
+        font-size: 1.8rem;
+    }
+
+    .event-gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
